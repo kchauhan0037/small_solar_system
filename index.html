@@ -50,6 +50,22 @@
             animation: rotate-earth 12s linear infinite;
         }
 
+        .mars{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: url('./earth.png');
+            background-position: center ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            box-shadow: 0 0 90px #C8E7F8;
+            animation: rotate-mars 17s linear infinite;
+        }
+
         .moon {
             position: absolute;
             width: 20px;
@@ -100,6 +116,16 @@
             }
         }
 
+        @keyframes rotate-mars {
+            0% {
+                transform: rotate(0deg) translateX(200px)
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(200px)
+            }
+        }
+
         @keyframes rotate-moon {
             0% {
                 transform: rotate(0deg) translateX(30px)
@@ -117,6 +143,7 @@
         <div class="earth">
             <div class="moon"></div>
         </div>
+        <div class="mars"></div>
     </div>
 </body>
 
